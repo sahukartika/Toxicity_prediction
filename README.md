@@ -8,13 +8,10 @@ comparing Logistic Regression, Random Forest, SVM (RBF), k-NN, and XGBoost.
 
 ## Model performance (nested CV, mean ± std over 5 outer folds)
 
-| Model | MCC | ROC-AUC | Accuracy | F1 |
+| Model | ROC-AUC | Accuracy | F1 |
 |---|---|---|---|---|
-| **XGBoost (deployed)** | 0.636 ± 0.025 | 0.897 ± 0.008 | 0.821 ± 0.012 | 0.842 ± 0.010 |
-| Random Forest | 0.625 ± 0.014 | 0.890 ± 0.010 | 0.814 ± 0.007 | 0.831 ± 0.008 |
-| SVM (RBF) | 0.592 ± 0.027 | 0.871 ± 0.010 | 0.796 ± 0.014 | 0.812 ± 0.014 |
-| Logistic Regression | 0.570 ± 0.030 | 0.860 ± 0.012 | 0.787 ± 0.014 | 0.807 ± 0.013 |
-| k-NN | 0.536 ± 0.034 | 0.852 ± 0.011 | 0.773 ± 0.017 | 0.801 ± 0.015 |
+| **XGBoost (deployed)** | 0.897 ± 0.008 | 0.821 ± 0.012 | 0.842 ± 0.010 |
+
 
 XGBoost was auto-selected (highest mean MCC) and retrained on the full
 5,362-sample dataset (2,346 non-toxic / 3,016 toxic) for deployment.
@@ -73,5 +70,4 @@ df = predict_toxicity("your_samples.csv")
 - Predictions for chemicals well outside the training set's structural space
   (applicability domain) may be unreliable.
 - This model predicts Ames mutagenicity specifically — not general toxicity.
-- Pickled scikit-learn/XGBoost models are version-sensitive; see the note in
-  `requirements.txt`.
+
