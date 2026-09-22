@@ -9,8 +9,9 @@ comparing Logistic Regression, Random Forest, SVM (RBF), k-NN, and XGBoost.
 ## Model performance (nested CV, mean ± std over 5 outer folds)
 
 | Model | ROC-AUC | Accuracy | F1 |
-|---|---|---|---|---|
+|---|---:|---:|---:|
 | **XGBoost (deployed)** | 0.897 ± 0.008 | 0.821 ± 0.012 | 0.842 ± 0.010 |
+
 
 
 XGBoost was auto-selected (highest mean MCC) and retrained on the full
