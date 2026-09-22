@@ -14,7 +14,7 @@ comparing Logistic Regression, Random Forest, SVM (RBF), k-NN, and XGBoost.
 
 
 
-XGBoost was auto-selected (highest mean MCC) and retrained on the full
+
 5,362-sample dataset (2,346 non-toxic / 3,016 toxic) for deployment.
 
 ## Repo contents
